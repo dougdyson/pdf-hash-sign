@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PDF Signer</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <h1>PDF Signer</h1>
@@ -20,5 +21,23 @@
       </ol>
     </details>
     <br/>
+    <button type="button" class="button" id="btnConnect">Connect</button>
+    <input type="file" class="input" id="inpFile" name="inpFile">
+    <br/>
+    <button type="button" class="button" id="btnUpload" name="btnUpload">Upload</button>
+    <textarea class="pdfText" id="resultText" placeholder="Your PDF text will appear here..."></textarea>
+    <button type="button" class="button" id="btnSign">Sign</button>
+    <hr>
+    <br/>
+    <label class="label">Your address</label>
+    <br/>
+    <textarea id="addressResult" class="textareaResults" placeholder="Public address appears here...">0x9DA47B51E0AE896fbEaf0DCE7F14fFe11A8Dc618</textarea>
+    <label class="label">PDF hash (message)</label>
+    <br/>
+    <textarea id="pdfHashResult" class="textareaResults" placeholder="PDF hash will appear here..."></textarea>
+    <label class="label">Signature hash</label>
+    <br/>
+    <textarea id="sigHash" class="textareaResults" placeholder="Signature hash appears here..."></textarea>
 </body>
+
 </html>

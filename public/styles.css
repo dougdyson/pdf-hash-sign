@@ -1,0 +1,36 @@
+body {
+  padding: 0px 20px;
+}
+
+.button {
+  display: block;
+  width: 108px;
+  margin-bottom: 1em;
+}
+
+.input {
+  display: block;
+}
+
+.label {
+  margin-top: 5px;
+}
+
+.pdfText {
+  width: 100%;
+  max-width: 480px;
+  height: 150px;
+}
+
+hr {
+  margin-top: 10px;
+  width: 100%;
+  color: grey;
+}
+
+.textareaResults {
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 20px;
+}
