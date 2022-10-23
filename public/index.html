@@ -31,7 +31,7 @@
     <br/>
     <label class="label">Your address</label>
     <br/>
-    <textarea id="addressResult" class="textareaResults" placeholder="Public address appears here...">0x9DA47B51E0AE896fbEaf0DCE7F14fFe11A8Dc618</textarea>
+    <textarea id="addressResult" class="textareaResults" placeholder="Public address appears here..."></textarea>
     <label class="label">PDF hash (message)</label>
     <br/>
     <textarea id="pdfHashResult" class="textareaResults" placeholder="PDF hash will appear here..."></textarea>
@@ -39,5 +39,16 @@
     <br/>
     <textarea id="sigHash" class="textareaResults" placeholder="Signature hash appears here..."></textarea>
 </body>
+<script>
+  const getWalletAddressButton = document.getElementById('btnConnect');
 
+  getWalletAddressButton.addEventListener('click', async () => {
+    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+    const account = accounts[0];
+    document.getElementById('addressResult').value = account;
+  });
+
+  
+
+</script>
 </html>
