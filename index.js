@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const MetaMaskOnboarding = require('@metamask/onboarding');
+const pdfParse = require('pdf-parse');
 const { encrypt, recoverPersonalSignature } = require('@metamask/eth-sig-util');
 const keccak256 = require('keccak256');
 
