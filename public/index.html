@@ -56,22 +56,22 @@
   });
 
   btnUpload.addEventListener("click", () => {
-      event.preventDefault();
+    event.preventDefault();
 
-      let fd = new FormData();
-      fd.append("pdfFile", inpFile.files[0]);
-      
-      fetch('/extract-text', {
-        method: 'POST',
-        body: fd,
-      })
-      .then((response) => response.text())
-      .then((data) => {
-        data = JSON.parse(data);
-        resultText.value = data.text;
-        pdfHashResult.value = data.hash;
-      }); 
-    });
+    let fd = new FormData();
+    fd.append("pdfFile", inpFile.files[0]);
+    
+    fetch('/extract-text', {
+      method: 'POST',
+      body: fd,
+    })
+    .then((response) => response.text())
+    .then((data) => {
+      data = JSON.parse(data);
+      resultText.value = data.text;
+      pdfHashResult.value = data.hash;
+    }); 
+  });
 
   
 
