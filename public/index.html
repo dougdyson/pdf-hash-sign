@@ -73,5 +73,16 @@
     }); 
   });
 
+  btnSign.addEventListener('click', async () => {
+    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+    const account = accounts[0];
+    const hash = pdfHashResult.value;
+    const sig = await ethereum.request({
+      method: 'personal_sign',
+      params: [hash, account, 'example password'],
+    });
+    sigHash.value = sig;
+  });
+
 </script>
 </html>
