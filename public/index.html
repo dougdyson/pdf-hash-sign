@@ -76,10 +76,13 @@
   btnSign.addEventListener('click', async () => {
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
     const account = accounts[0];
-    const hash = pdfHashResult.value;
+    document.getElementById('addressResult').value = account;
+    // need to add workaround for bufferring hex strings
+    const msg = `PDF hash: ${pdfHashResult.value}`;
+    console.log(msg);
     const sig = await ethereum.request({
       method: 'personal_sign',
-      params: [hash, account, 'example password'],
+      params: [msg, account],
     });
     sigHash.value = sig;
   });
