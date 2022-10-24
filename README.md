@@ -1,2 +1,9 @@
 # pdf-hash-sign
-Sign a hash of a PDF with blockchain wallet
+Upload and sign a hash of a PDF with a MetaMask wallet.
+
+## User Instructions
+* Click "Connect" to connect your MetaMask wallet
+* Click "Choose file" to select PDF
+* Click "Upload" to upload a PDF file
+* Click "Sign" to sign PDF hash
+* Verify at https://etherscan.io/verifiedSignatures
