@@ -17,6 +17,7 @@ body {
 }
 
 .pdfText {
+  display: none;
   width: 100%;
   max-width: 480px;
   height: 150px;
