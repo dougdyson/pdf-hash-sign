@@ -69,7 +69,7 @@
     .then((data) => {
       data = JSON.parse(data);
       resultText.value = data.text;
-      pdfHashResult.value = data.hash;
+      pdfHashResult.value = `pdf${data.hash}`;
     }); 
   });
 
@@ -78,8 +78,7 @@
     const account = accounts[0];
     document.getElementById('addressResult').value = account;
     // need to add workaround for bufferring hex strings
-    const msg = `PDF hash: ${pdfHashResult.value}`;
-    console.log(msg);
+    const msg = pdfHashResult.value;
     const sig = await ethereum.request({
       method: 'personal_sign',
       params: [msg, account],
