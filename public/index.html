@@ -76,7 +76,6 @@
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
     const account = accounts[0].toString();
     document.getElementById('addressResult').value = account;
-    // need to add workaround for buffering hex strings
     const msg = pdfHashResult.value.toString();
     const sig = await ethereum.request({
       method: 'personal_sign',
