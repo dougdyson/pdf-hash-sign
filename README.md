@@ -1,6 +1,9 @@
 # pdf-hash-sign
 Upload and sign a hash of a PDF with a MetaMask wallet.
 
+## Server
+* node run index.js
+
 ## User Instructions
 * Click "Connect" to connect your MetaMask wallet
 * Click "Choose file" to select PDF
