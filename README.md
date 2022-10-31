@@ -1,5 +1,5 @@
 # pdf-hash-sign
-Upload and sign a hash of a PDF with a MetaMask wallet
+A proof of concept to sign the hash of a PDF's contents with a MetaMask wallet
 
 ## Server
 * node run index.js
